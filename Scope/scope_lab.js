@@ -26,28 +26,36 @@ function show(){
     }
     show();
     
-    console.log(functionVar); // Throws ReferenceError
-    console.log(functionLet); // Throws ReferenceError
-    console.log(functionConst); // Throws ReferenceError
+    //console.log(functionVar); // Throws ReferenceError
+    //console.log(functionLet); // Throws ReferenceError
+    //console.log(functionConst); // Throws ReferenceError
 
 // Own tests
 {
     let a = "Let variable";
     const b = "Constant variable";
     var c = "Var variable";
+
     //reassignment within block
     let a = "reassigned Let variable";
     a = "reassigned Let variable without let declaration keyword"
     const b = "reassigned Constant variable"
     b = "reassigned Constant variable without const declaration keyword"
-    var c = "reassigned Var variable"
-    c = "reassigned Var variable without var declaration keyword"
-}
+    var c = "reassigned Var variable";
+    c = "reassigned Var variable without var declaration keyword";
+    console.log(a);
+    console.log(b);
+    console.log(c);
+};
 
 //reassignment outside of block
 let a = "reassigned Let variable";
-a = "reassigned Let variable without let declaration keyword"
-const b = "reassigned Constant variable"
-b = "reassigned Constant variable without const declaration keyword"
-var c = "reassigned Var variable"
-c = "reassigned Var variable without var declaration keyword"
+a = "reassigned Let variable without let declaration keyword";
+const b = "reassigned Constant variable";
+b = "reassigned Constant variable without const declaration keyword";
+var c = "reassigned Var variable";
+c = "reassigned Var variable without var declaration keyword";
+
+console.log(a);
+console.log(b);
+console.log(c);
