@@ -2,6 +2,16 @@ let testText = "The quick brown fox jumps over the lazy dog.";
 let startTime, endTime;
 
 function startTest() {
+
+    // Clear user input and enable the input field
+    var userInput = document.getElementById("userInput");
+    userInput.value = "";
+    userInput.readOnly = false;
+
+    //Clear the inputText field (to reset it before setting the test text)
+    var inputText = document.getElementById("inputText");
+    inputText.value = "";
+
     // Set the test text
     document.getElementById("inputText").value = testText;
     
@@ -13,6 +23,9 @@ function startTest() {
     var button = document.getElementById("btn");
     button.innerHTML = "End Test";
     button.onclick = endTest;
+
+    //Autofocus the cursor into the userInput textarea so as to not waste time clicking
+    userInput.focus();
 }
 
 function endTest() {
